@@ -1,0 +1,179 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centralização o conteúdo */
+.center {
+  max-width: 1100px;
+  padding: 0 2%;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Plano de fundo principal */
+section.main {
+  min-height: 800px;
+  background-image: url(imagem/COMPUTADOR.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Variáveis de cor */
+:root {
+  --cor-destaque: #ffb703;       
+  --cor-texto: #023047;          
+  --cor-header: rgba(0, 71, 102, 0.7);
+  --cor-hover: #8ecae6;
+}
+
+/* Header estilizado */
+header {
+  background-color: var(--cor-header);
+  height: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nome no topo */
+.nome {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Menu */
+.menu-container a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.menu-container a:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-texto);
+}
+
+.menu-container a.active-menu {
+  background-color: var(--cor-destaque);
+  color: black;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+  border-radius: 50%;
+  width: 200px;
+  height: 175px;
+  object-fit: cover;
+  position: absolute;
+  top: 120px;         
+  left: 100px;        
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Caixa de texto */
+.foto-perfil-texto {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 550px;
+  height: 350px;
+  position: absolute;
+  top: 310px;         
+  left: 50px;         
+  text-align: center;
+  padding: 20px;
+  color: var(--cor-texto);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+}
+
+/* Links na caixa */
+.foto-perfil-texto a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.foto-perfil-texto a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Rodapé */
+section.redes-sociais {
+  padding: 30px;
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  background-color: var(--cor-header);
+}
+
+.redes-sociais h1 {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin-bottom: 10px;
+}
+
+.redes-sociais a {
+  color: white;
+  margin: 0 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 0.4s;
+  border-radius: 8px;
+}
+
+.redes-sociais a:hover {
+  background-color: var(--cor-destaque);
+  color: black;
+}
+
+.logos-redes {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .nome {
+    font-size: 14px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-container a {
+    display: block;
+    background-color: var(--cor-header);
+    margin: 4px 0;
+  }
+
+  .foto-perfil {
+    top: 100px;
+    left: 25px;
+    width: 150px;
+    height: 130px;
+  }
+
+  .foto-perfil-texto {
+    top: 250px;
+    left: 5%;
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .logos-redes {
+    margin-top: 0.5px;
+  }
+}

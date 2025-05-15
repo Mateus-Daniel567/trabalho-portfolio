@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato</title>
+  <style>
+    :root {
+      --cor-caixa: #D0E8F2;         
+      --cor-botao: #0077B6;        
+      --cor-texto: #023047;         
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('imagem/IMAGEM CONTATO.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contato {
+      background-color: var(--cor-caixa);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      color: var(--cor-texto);
+    }
+
+    .contato h2 {
+      color: var(--cor-texto);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form p {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+      height: 90px;
+    }
+
+    input[type="submit"] {
+      background-color: var(--cor-botao);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005f8e;
+    }
+
+    @media (max-width: 600px) {
+      .contato {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contato">
+    <h2>Por Favor, informe seu e-mail para contato abaixo</h2>
+    <form>
+      <p>
+        Nome:<br />
+        <input type="text" name="nome" />
+      </p>
+      <p>
+        E-mail:<br />
+        <input type="email" name="email" />
+      </p>
+      <p>
+        Descrição:<br />
+        <textarea name="descricao"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="Enviar" />
+      </p>
+    </form>
+  </div>
+</body>
+</html>
